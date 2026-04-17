@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: realtime-web-summarizer-qwen-agent
+Version: 0.1.0
+Summary: Real-time web summarizer backend using OpenAI API and FastAPI
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: uvicorn[standard]>=0.30.0
+Requires-Dist: pydantic>=2.7.0
+Requires-Dist: pydantic-settings>=2.3.0
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: tenacity>=8.3.0
+Requires-Dist: httpx>=0.27.0
+
+# Backend Service
+
+FastAPI WebSocket backend for the real-time web summarizer extension.
+
+This package is installed in editable mode during local development.

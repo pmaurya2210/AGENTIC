@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Real-Time Web Summarizer (Qwen-Agent)",
+  "description": "Summarize current web page in real time via Qwen-Agent backend.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://localhost:8000/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Summarize this page"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
